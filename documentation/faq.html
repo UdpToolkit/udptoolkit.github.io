@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FAQ | UdpToolkit website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="FAQ | UdpToolkit website ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="faq">FAQ</h1>
+
+<p><strong>Q:</strong> For what?<br>
+<strong>A:</strong> For real-time multiplayer games. Many ideas (Sequenced Channel, RTT measurement) were taken from <a href="https://gafferongames.com/">GafferOnGames</a> blog. If you start implementing these features you could see this is not simple. And for me nice to have a tool for writing multiplayer games in C#/.NET with described approaches.</p>
+<p><strong>Q:</strong> Why just not use ready project?<br>
+<strong>A:</strong> Of Course already exist well-tested projects. This is my list of disadvantages of using several well-known solutions:</p>
+<ul>
+<li>Pricing</li>
+<li>Poor SLA for cloud services</li>
+<li>Huge source code base</li>
+<li>Sometimes strange code base with hardcoded dependencies</li>
+<li>Private sources</li>
+<li>Not cross platform solutions</li>
+</ul>
+<p><strong>Q:</strong> Ok, what about performance?<br>
+<strong>A:</strong> &quot;Premature optimization is the root of all evil.&quot; Donald Knuth (C).<br>
+The project is still under development. And some features related to performance have not been implemented yet, because not all components have stable design and API.
+I have plans for adding needed optimizations to reduce the impact of GC, this is very important for Unity3D projects and think they will appear in the project by the beta version, stay tuned.</p>
+<p><strong>Q:</strong> Why do I see other third-party libs used for serialization?<br>
+<strong>A:</strong> By default <code>UdpToolkit</code> does not provide an implementation of <code>ISerializer</code>, several reasons for this:</p>
+<ul>
+<li>This is a hard task to implement your own serialization library with nice performance metrics and this is out of scope for this project.</li>
+<li>Not all serialization libraries support IL2CPP builds.</li>
+<li>Transitive dependencies are evil. In my mind, any tool should not force you to use any third-party libs, but very nice to have an expansion point, for explicit changing behavior.</li>
+<li>In different projects used different tools for serialization.</li>
+</ul>
+<p><strong>Q:</strong> Why the project uses code generation?<br>
+<strong>A:</strong> Several reasons:</p>
+<ul>
+<li>Simplifying the codebase.</li>
+<li>IL emit or reflection API may be unsupported by runtimes on mobile devices and can cause crashes.</li>
+</ul>
+<p><strong>Q:</strong> Could I use only network without framework?<br>
+<strong>A:</strong> Yes.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UdpToolkit/UdpToolkit/blob/master/docs/documentation/faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

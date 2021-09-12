@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quick start guide (.NET Core) | UdpToolkit website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Quick start guide (.NET Core) | UdpToolkit website ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="quick-start-guide-net-core">Quick start guide (.NET Core)</h1>
+
+<h2 id="required-tools">Required tools</h2>
+<ul>
+<li>Installed <a href="https://dotnet.microsoft.com/download/dotnet/5.0">net5.0</a></li>
+</ul>
+<h2 id="project-structure">Project structure</h2>
+<ol>
+<li>Create class library:
+<code>dotnet new classlib --name Contracts</code></li>
+<li>Create Server:
+<code>dotnet new console --name Server</code></li>
+<li>Create Client:
+<code>dotnet new console --name Client</code></li>
+<li>Create solution file and add all projects to them:
+<code>dotnet new sln --name SampleProject</code></li>
+</ol>
+<p>The final project structure should look like this:</p>
+<pre><code>Server/
+  Server.csproj
+Client/
+  Client.cspproj
+Contracts/
+  Contracts.cspproj
+
+SampleProject.sln
+</code></pre>
+<h2 id="contracts">Contracts</h2>
+<ol>
+<li>Update <code>Contracts.cspproj</code> file by the following code:</li>
+</ol>
+<pre><code class="lang-html">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+    &lt;PropertyGroup&gt;
+        &lt;TargetFramework&gt;net5.0&lt;/TargetFramework&gt;
+    &lt;/PropertyGroup&gt;
+
+    &lt;ItemGroup&gt;
+        &lt;PackageReference 
+                Include=&quot;UdpToolkit.CodeGenerator&quot; 
+                Version=&quot;&lt;latest_version&gt;&quot; 
+                PrivateAssets=&quot;all&quot; /&gt;
+    &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre>
+<ol start="2">
+<li>Add class <code>Message</code> to library:</li>
+</ol>
+<pre><code class="lang-c#">namespace Contracts
+{
+    using UdpToolkit.Annotations;
+
+
+    [UdpEvent]
+    public class Message
+    {
+        public string Text { get; set; }
+    }
+}
+</code></pre>
+<ol start="3">
+<li>Add custom implementation of <code>ISerializer</code> to the library:</li>
+</ol>
+<pre><code class="lang-c#">namespace Contracts
+{
+    using System;
+    using System.Text.Json;
+    using UdpToolkit.Serialization;
+
+    public sealed class NetJsonSerializer : ISerializer
+    {
+        public byte[] Serialize&lt;T&gt;(T item)
+        {
+            return JsonSerializer.SerializeToUtf8Bytes(item);
+        }
+
+        public T Deserialize&lt;T&gt;(ArraySegment&lt;byte&gt; bytes)
+        {
+            return JsonSerializer.Deserialize&lt;T&gt;(bytes);
+        }
+    }
+}
+</code></pre>
+<h2 id="server">Server</h2>
+<ol>
+<li>Update <code>Server.cspproj</code> by the following code:</li>
+</ol>
+<pre><code class="lang-html">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+    &lt;PropertyGroup&gt;
+        &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+        &lt;TargetFramework&gt;net5.0&lt;/TargetFramework&gt;
+    &lt;/PropertyGroup&gt;
+
+    &lt;ItemGroup&gt;
+        &lt;PackageReference Include=&quot;UdpToolkit&quot; Version=&quot;&lt;latest_version&gt;&quot; /&gt;
+    &lt;/ItemGroup&gt;
+
+    &lt;ItemGroup&gt;
+        &lt;ProjectReference Include=&quot;../Contracts/Contracts.csproj&quot; /&gt;
+    &lt;/ItemGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<ol start="2">
+<li>Add code to <code>Main</code> method:</li>
+</ol>
+<pre><code class="lang-c#">namespace Server
+{
+    using System;
+    using Contracts;
+    using UdpToolkit;
+    using UdpToolkit.Framework;
+    using UdpToolkit.Framework.Contracts;
+    using UdpToolkit.Framework.Contracts.Settings;
+
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+            // 1) Create UDP host:
+            var host = BuildHost();
+
+            // 4) Subscribe on event:
+            host.On&lt;Message&gt;(
+                onEvent: (connectionId, ip, message) =&gt;
+                {
+                    Console.WriteLine($&quot;Message received: {message.Text}&quot;);
+                    host.ServiceProvider.RoomManager
+                        .JoinOrCreate(Guid.Empty, connectionId, ip);
+                });
+
+            // 5) Run host:
+            host.Run();
+
+            Console.WriteLine(&quot;Press any key..&quot;);
+            Console.ReadLine();
+        }
+
+        private static IHost BuildHost()
+        {
+            var hostSettings = new HostSettings(
+                serializer: new NetJsonSerializer());
+
+            return UdpHost
+                .CreateHostBuilder()
+                .ConfigureHost(hostSettings, settings =&gt;
+                {
+                    // 2) Assign port:
+                    settings.HostPorts = new[] { 7000 };
+                })
+                .ConfigureNetwork((settings) =&gt;
+                {
+                    // 3) Allow incoming connections:
+                    settings.AllowIncomingConnections = true;
+                })
+                .BootstrapWorker(new HostWorkerGenerated())
+                .Build();
+        }
+    }
+}
+</code></pre>
+<h2 id="client">Client</h2>
+<ol>
+<li>Update <code>Client.cspproj</code> file by the following code:</li>
+</ol>
+<pre><code class="lang-html">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+    &lt;PropertyGroup&gt;
+        &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+        &lt;TargetFramework&gt;net5.0&lt;/TargetFramework&gt;
+    &lt;/PropertyGroup&gt;
+
+    &lt;ItemGroup&gt;
+        &lt;PackageReference Include=&quot;UdpToolkit&quot; Version=&quot;&lt;latest_version&gt;&quot; /&gt;
+    &lt;/ItemGroup&gt;
+
+    &lt;ItemGroup&gt;
+        &lt;ProjectReference Include=&quot;../Contracts/Contracts.csproj&quot; /&gt;
+    &lt;/ItemGroup&gt;
+&lt;/Project&gt;
+
+</code></pre>
+<ol start="2">
+<li>Add code to <code>Main</code> method:</li>
+</ol>
+<pre><code class="lang-c#">namespace Client
+{
+    using System;
+    using System.Threading;
+    using Contracts;
+    using UdpToolkit;
+    using UdpToolkit.Framework;
+    using UdpToolkit.Framework.Contracts;
+    using UdpToolkit.Framework.Contracts.Settings;
+    using UdpToolkit.Network.Channels;
+
+    public static class Program
+    {
+        private static bool _isConnected = false;
+
+        public static void Main(string[] args)
+        {
+            // 1) Create UDP host:
+            var host = BuildHost();
+
+            host.HostClient.OnConnected += (address, connectionId) =&gt;
+            {
+                _isConnected = true;
+                Console.WriteLine(
+                    $&quot;Connected to server: {address} &quot; +
+                    $&quot;with id: {connectionId}&quot;);
+            };
+
+            // 4) Run host:
+            host.Run();
+
+            // 5) Connect to server:
+            host.HostClient.Connect();
+
+            // 6) Wait connection:
+            SpinWait.SpinUntil(() =&gt; _isConnected, 120);
+
+            // 5) Start sending messages:
+            int i = 0;
+            while (i &lt; 100)
+            {
+                i++;
+                host.HostClient.Send(
+                    new Message
+                    {
+                        Text = $&quot;Message {i} from client&quot;,
+                    },
+                    ReliableChannel.Id);
+                Thread.Sleep(1000);
+            }
+
+            Console.WriteLine(&quot;Press any key..&quot;);
+            Console.ReadLine();
+        }
+
+        private static IHost BuildHost()
+        {
+            var hostSettings = new HostSettings(
+                serializer: new NetJsonSerializer());
+
+            return UdpHost
+                .CreateHostBuilder()
+                .ConfigureHost(hostSettings, settings =&gt;
+                {
+                    // 2) Assign port:
+                    settings.HostPorts = new[] { 5000 };
+                })
+                .ConfigureHostClient(settings =&gt;
+                {
+                    // 3) Specify remote host port:
+                    settings.ServerPorts = new[] { 7000 };
+                })
+                .BootstrapWorker(new HostWorkerGenerated())
+                .Build();
+        }
+    }
+}
+</code></pre>
+<h2 id="up-and-running">Up and running</h2>
+<ol>
+<li>Run Server.</li>
+<li>Run Client.</li>
+<li>Observe output logs.</li>
+<li>Enjoy :)</li>
+</ol>
+<p>More samples available <a href="https://github.com/UdpToolkit/UdpToolkit/tree/master/samples">Here</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UdpToolkit/UdpToolkit/blob/master/docs/documentation/quick-start-core.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

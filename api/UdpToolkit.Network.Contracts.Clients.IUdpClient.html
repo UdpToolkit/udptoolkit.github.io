@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IUdpClient
+   | UdpToolkit website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IUdpClient
+   | UdpToolkit website ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient">
+  
+  
+  <h1 id="UdpToolkit_Network_Contracts_Clients_IUdpClient" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient" class="text-break">Interface IUdpClient
+  </h1>
+  <div class="markdown level0 summary"><p>Custom UDP client with own network protocol.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UdpToolkit.Network.Contracts.Clients.html">UdpToolkit.Network.Contracts.Clients</a></h6>
+  <h6><strong>Assembly</strong>: UdpToolkit.Network.Contracts.dll</h6>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IUdpClient : IDisposable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Connect_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Connect*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Connect_UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Connect(UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Connect(IpV4Address)</h4>
+  <div class="markdown level1 summary"><p>Connect to another UDP client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Connect(IpV4Address ipV4Address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
+        <td><span class="parametername">ipV4Address</span></td>
+        <td><p>Destination ip address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Disconnect_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Disconnect*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Disconnect_UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Disconnect(UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Disconnect(IpV4Address)</h4>
+  <div class="markdown level1 summary"><p>Disconnect from another UDP client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Disconnect(IpV4Address ipV4Address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
+        <td><span class="parametername">ipV4Address</span></td>
+        <td><p>Another UDP client address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Heartbeat_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Heartbeat*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Heartbeat_UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Heartbeat(UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Heartbeat(IpV4Address)</h4>
+  <div class="markdown level1 summary"><p>Send heartbeat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Heartbeat(IpV4Address ipV4Address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
+        <td><span class="parametername">ipV4Address</span></td>
+        <td><p>Destination ip address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_IsConnected_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.IsConnected*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_IsConnected_System_Guid__" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.IsConnected(System.Guid@)">IsConnected(out Guid)</h4>
+  <div class="markdown level1 summary"><p>Check state of connection to another UDP client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsConnected(out Guid connectionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">connectionId</span></td>
+        <td><p>Own connectionId.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if connection alive, false - if connection expired or client not connected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Send_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Send*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Send_System_Guid_System_Byte_System_Byte___UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Send(System.Guid,System.Byte,System.Byte[],UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Send(Guid, Byte, Byte[], IpV4Address)</h4>
+  <div class="markdown level1 summary"><p>Send user-defined packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Send(Guid connectionId, byte channelId, byte[] bytes, IpV4Address ipV4Address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">connectionId</span></td>
+        <td><p>ConnectionId.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">channelId</span></td>
+        <td><p>ChannelId.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>Payload.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
+        <td><span class="parametername">ipV4Address</span></td>
+        <td><p>Destination ip address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_StartReceive_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.StartReceive*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_StartReceive_System_Threading_CancellationToken_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.StartReceive(System.Threading.CancellationToken)">StartReceive(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Start receive packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StartReceive(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token for cancelling receive operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnConnected" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnConnected">OnConnected</h4>
+  <div class="markdown level1 summary"><p>Raised when UDP client connected to other UDP client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid&gt; OnConnected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnConnected_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IpV4Address - source ip
+Guid - connectionId</p>
+</div>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnDisconnected" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnDisconnected">OnDisconnected</h4>
+  <div class="markdown level1 summary"><p>Raised when UDP client disconnected from other UDP client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid&gt; OnDisconnected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnDisconnected_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IpV4Address - source ip
+Guid - connectionId</p>
+</div>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnHeartbeat" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnHeartbeat">OnHeartbeat</h4>
+  <div class="markdown level1 summary"><p>Raised when heartbeat received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;Guid, TimeSpan&gt; OnHeartbeat</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Guid</span>, <span class="xref">System.TimeSpan</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnHeartbeat_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Guid - connectionId
+TimeSpan - rtt for specific connection</p>
+</div>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketExpired" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnPacketExpired">OnPacketExpired</h4>
+  <div class="markdown level1 summary"><p>Raised when user-defined packet expired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte&gt; OnPacketExpired</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketExpired_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IpV4Address - source ip
+Guid - connectionId
+byte[] - payload without network header
+byte - channel</p>
+</div>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketReceived" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnPacketReceived">OnPacketReceived</h4>
+  <div class="markdown level1 summary"><p>Raised when new user-defined packet received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte&gt; OnPacketReceived</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketReceived_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IpV4Address - source ip
+Guid - connectionId
+byte[] - payload without network header
+byte - channel</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

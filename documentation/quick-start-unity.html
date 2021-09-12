@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quick start guide (Unity 3D) | UdpToolkit website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Quick start guide (Unity 3D) | UdpToolkit website ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="quick-start-guide-unity-3d">Quick start guide (Unity 3D)</h1>
+
+<h2 id="required-tools">Required tools</h2>
+<ul>
+<li>Installed <a href="https://dotnet.microsoft.com/download/dotnet/5.0">net5.0</a>.</li>
+<li>UdpToolkit-Cli: <code>dotnet tool install --global UdpToolkit.Cli</code>.</li>
+<li>Latest version of <a href="https://github.com/neuecc/MessagePack-CSharp">MessagePack-CSharp</a> and <a href="https://github.com/neuecc/MessagePack-CSharp#aot-code-generation-support-for-unityxamarin">mpc</a>.</li>
+</ul>
+<h2 id="project-structure">Project structure</h2>
+<ol>
+<li>Create class library:
+<code>dotnet new classlib --name Contracts</code></li>
+<li>Create Server:
+<code>dotnet new console --name Server</code></li>
+<li>Create Client (Empty Unity3d application with empty scene).</li>
+<li>Create solution file and add all projects to them:
+<code>dotnet new sln --name SampleProject</code></li>
+</ol>
+<p>The final project structure should look like this:</p>
+<pre><code>Server/
+  Server.csproj
+Client/
+  Assets/
+  Client.sln
+  ...(other Unity 3D folders)
+Contracts/
+  Contracts.cspproj
+
+SampleProject.sln
+</code></pre>
+<h2 id="contracts">Contracts</h2>
+<ol>
+<li>Update <code>Contracts.cspproj</code> file by the following code:</li>
+</ol>
+<pre><code class="lang-html">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+   &lt;PropertyGroup&gt;
+      &lt;TargetFramework&gt;net5.0&lt;/TargetFramework&gt;
+   &lt;/PropertyGroup&gt;
+
+   &lt;ItemGroup&gt;
+      &lt;PackageReference Include=&quot;MessagePack&quot; Version=&quot;2.3.75&quot; /&gt;
+      &lt;PackageReference Include=&quot;UdpToolkit.Framework.CodeGenerator.Contracts&quot; Version=&quot;&lt;latest_version&gt;&quot; /&gt;
+   &lt;/ItemGroup&gt;
+
+   &lt;ItemGroup&gt;
+      &lt;Compile Include=&quot;../Client/Assets/Shared/**/*.cs&quot; LinkBase=&quot;Shared&quot; /&gt;
+      &lt;Compile Update=&quot;..\Client\Assets\Shared\Message.cs&quot;&gt;
+         &lt;Link&gt;Shared\Message.cs&lt;/Link&gt;
+      &lt;/Compile&gt;
+      &lt;Compile Update=&quot;..\Client\Assets\Shared\MessagePackCSharpSerializer.cs&quot;&gt;
+         &lt;Link&gt;Shared\MessagePackSerializer.cs&lt;/Link&gt;
+      &lt;/Compile&gt;
+      &lt;Compile Update=&quot;..\Client\Assets\Shared\HostWorkerGenerated.cs&quot;&gt;
+         &lt;Link&gt;Shared\HostWorkerGenerated.cs&lt;/Link&gt;
+      &lt;/Compile&gt;
+   &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre>
+<h2 id="server">Server</h2>
+<ol>
+<li>Update <code>Server.cspproj</code> by the following code:</li>
+</ol>
+<pre><code class="lang-html">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+   &lt;PropertyGroup&gt;
+      &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+      &lt;TargetFramework&gt;net5.0&lt;/TargetFramework&gt;
+   &lt;/PropertyGroup&gt;
+
+   &lt;ItemGroup&gt;
+      &lt;PackageReference Include=&quot;UdpToolkit&quot; Version=&quot;&lt;latest_version&gt;&quot; /&gt;
+   &lt;/ItemGroup&gt;
+
+   &lt;ItemGroup&gt;
+      &lt;ProjectReference Include=&quot;../Contracts/Contracts.csproj&quot; /&gt;
+   &lt;/ItemGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<ol start="2">
+<li>Add code to <code>Main</code> method:</li>
+</ol>
+<pre><code class="lang-c#">namespace Server
+{
+    using System;
+    using Shared;
+    using UdpToolkit;
+    using UdpToolkit.Framework;
+    using UdpToolkit.Framework.Contracts;
+    using UdpToolkit.Framework.Contracts.Settings;
+
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+            // 1) Create UDP host:
+            var host = BuildHost();
+
+            // 4) Subscribe on event:
+            host.On&lt;Message&gt;(
+                onEvent: (connectionId, ip, message) =&gt;
+                {
+                    Console.WriteLine($&quot;Message received: {message.Text}&quot;);
+                    host.ServiceProvider.RoomManager
+                        .JoinOrCreate(Guid.Empty, connectionId, ip);
+                });
+
+            // 5) Run host:
+            host.Run();
+
+            Console.WriteLine(&quot;Press any key..&quot;);
+            Console.ReadLine();
+        }
+
+        private static IHost BuildHost()
+        {
+            var hostSettings = new HostSettings(
+                serializer: new MessagePackCSharpSerializer());
+
+            return UdpHost
+                .CreateHostBuilder()
+                .ConfigureHost(hostSettings, settings =&gt;
+                {
+                    // 2) Assign port:
+                    settings.HostPorts = new[] { 7000 };
+                })
+                .ConfigureNetwork((settings) =&gt;
+                {
+                    // 3) Allow incoming connections:
+                    settings.AllowIncomingConnections = true;
+                })
+                .BootstrapWorker(new HostWorkerGenerated())
+                .Build();
+        }
+    }
+}
+</code></pre>
+<h2 id="client">Client</h2>
+<ol>
+<li><p>Install <a href="https://github.com/UdpToolkit/UdpToolkit/releases">UdpToolkit.unitypackage</a> from release page.</p>
+</li>
+<li><p>Install <a href="https://github.com/neuecc/MessagePack-CSharp/releases">MessagePack.Unity.unitypackage</a> from release page. At this point, conflicts between dll's possible, remove duplicates from <code>Plugins</code> folder.</p>
+</li>
+<li><p>Add following code to <code>Assets/Shared/Message.cs</code>:</p>
+</li>
+</ol>
+<pre><code class="lang-c#">// ReSharper disable once CheckNamespace
+
+using MessagePack;
+using UdpToolkit.Annotations;
+
+namespace Shared
+{
+    [UdpEvent]
+    [MessagePackObject]
+    public class Message
+    {
+        [Key(0)]
+        public string Text { get; set; }
+    }
+}
+</code></pre>
+<ol start="4">
+<li><p>Generate <code>HostWorkerGenerated.cs</code> by command:<br>
+<code>udptoolkit-cli -p ./Contracts/Contracts.csproj -o ./Client/Assets/Shared</code>.</p>
+</li>
+<li><p>Generate <code>MessagePack-CSharp</code> files by command:<br>
+<code>mpc -i ./Contracts/Contracts.csproj -o ./Client/Assets/Scripts</code>.</p>
+</li>
+<li><p>Add custom implementation of <code>ISerializer</code> to <code>Assets/Shared/MessagePackCSharpSerializer.cs</code>:</p>
+</li>
+</ol>
+<pre><code class="lang-c#">using System;
+using MessagePack;
+using UdpToolkit.Serialization;
+
+namespace Shared
+{
+    public class MessagePackCSharpSerializer : ISerializer
+    {
+        public byte[] Serialize&lt;T&gt;(T item)
+        {
+            return MessagePackSerializer.Serialize(item);
+        }
+
+        public T Deserialize&lt;T&gt;(ArraySegment&lt;byte&gt; bytes)
+        {
+            return MessagePackSerializer.Deserialize&lt;T&gt;(bytes);
+        }
+    }
+}
+</code></pre>
+<ol start="7">
+<li>Add following code to <code>Assets/Scripts/ClientScript.cs</code>:</li>
+</ol>
+<pre><code class="lang-c#">using MessagePack;
+using MessagePack.Resolvers;
+using Shared;
+using UdpToolkit;
+using UdpToolkit.Framework;
+using UdpToolkit.Framework.Contracts;
+using UdpToolkit.Framework.Contracts.Settings;
+using UdpToolkit.Logging;
+using UdpToolkit.Network.Channels;
+using UnityEngine;
+
+public class ClientScript : MonoBehaviour
+{
+    private bool _isConnected;
+    private IHost _host;
+    private int _counter = 0;
+
+    void Start()
+    {
+        // 1) Register serializers:
+        StaticCompositeResolver.Instance.Register(
+            GeneratedResolver.Instance,
+            StandardResolver.Instance);
+
+        MessagePackSerializer.DefaultOptions = MessagePackSerializerOptions.Standard
+            .WithResolver(StaticCompositeResolver.Instance);
+        
+        // 2) Create UDP host:
+        _host = BuildHost();
+
+        _host.HostClient.OnConnected += (address, connectionId) =&gt;
+        {
+            _isConnected = true;
+            Debug.Log(
+                $&quot;Connected to server: {address} &quot; +
+                $&quot;with id: {connectionId}&quot;);
+        };
+
+        // 6) Run host:
+        _host.Run();
+
+        // 7) Connect to server:
+        _host.HostClient.Connect();
+    }
+
+    void Update()
+    {
+        _counter++;
+        if (_isConnected)
+        {
+            if (_counter % 60 == 0)
+            {
+                _host.HostClient.Send(
+                    new Shared.Message
+                    {
+                        Text = $&quot;Message from Unity3D client&quot;,
+                    },
+                    ReliableChannel.Id);
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        _host.Dispose();
+    }
+
+    private static IHost BuildHost()
+    {
+        var hostSettings = new HostSettings(
+            serializer: new MessagePackCSharpSerializer());
+
+        return UdpHost
+            .CreateHostBuilder()
+            .ConfigureHost(hostSettings, settings =&gt;
+            {
+                // 3) Assign port:
+                settings.HostPorts = new[] { 5000 };
+                // 4) Replace default logger implementation: 
+                settings.LoggerFactory = new UnityLoggerFactory(LogLevel.Debug);
+            })
+            .ConfigureHostClient(settings =&gt;
+            {
+                // 5) Specify remote host port:
+                settings.ServerPorts = new[] { 7000 };
+            })
+            .BootstrapWorker(new HostWorkerGenerated())
+            .Build();
+    }
+}
+</code></pre>
+<ol start="8">
+<li>Create empty <code>GameObject</code> on scene and attach script <code>ClientScript.cs</code>.</li>
+</ol>
+<h2 id="up-and-running">Up and running</h2>
+<ol>
+<li>Run Server.</li>
+<li>Run Client.</li>
+<li>Observe output logs.</li>
+<li>Enjoy :)</li>
+</ol>
+<p>More samples available <a href="https://github.com/UdpToolkit/UdpToolkit/tree/master/samples">Here</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UdpToolkit/UdpToolkit/blob/master/docs/documentation/quick-start-unity.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

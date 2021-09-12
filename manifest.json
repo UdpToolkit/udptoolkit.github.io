@@ -1,0 +1,1346 @@
+{
+  "homepages": [],
+  "source_base_path": "docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Annotations.UdpEventAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Annotations.UdpEventAttribute.html",
+          "hash": "OSwVB28lk649uVFQGwErgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Annotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Annotations.html",
+          "hash": "+bnDkgiLYcdDhNKmW/Ae+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Broadcaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Broadcaster.html",
+          "hash": "8CpC/1R+VfYDI3oyoOwoFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.BlockingAsyncQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.BlockingAsyncQueue-1.html",
+          "hash": "NjXDtTd/t5CAv01XQw4Pug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.BroadcastMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.BroadcastMode.html",
+          "hash": "JOjHI0CnIDH/ai49XdCARg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.ConnectionIdFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.ConnectionIdFactory.html",
+          "hash": "6MOax1JMkCeQF9wsF9kjEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.DateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.DateTimeProvider.html",
+          "hash": "+/a0SCAnzbGa2Z1El1LAng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Executors.IExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Executors.IExecutor.html",
+          "hash": "wv3YsPEtzOJzonIeNGZl1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Executors.TaskBasedExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Executors.TaskBasedExecutor.html",
+          "hash": "v+aHUTyAR7JRYqNHo0MqlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Executors.ThreadBasedExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Executors.ThreadBasedExecutor.html",
+          "hash": "oOG0SqR5IyOcEDC49Ll/FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Executors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Executors.html",
+          "hash": "b4U2SkgmmNf3YKK/otIPtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.HostClientSettingsInternal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.HostClientSettingsInternal.html",
+          "hash": "wuRyJGOYadFVHogMkB0YBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.HostExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.HostExtensions.html",
+          "hash": "gGnhdMsO5RY8qGpFRRvDsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IAsyncQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IAsyncQueue-1.html",
+          "hash": "ISGzN4a/9jvLfUDPkCw+9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IBroadcaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IBroadcaster.html",
+          "hash": "qdeg2hb1mFoBGKC/rT6Qyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IDateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IDateTimeProvider.html",
+          "hash": "p7T/9r5eZnPwoWDB3T5hfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IHost.html",
+          "hash": "tU2hJTcmazTTkOUjAdtwWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IHostBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IHostBuilder.html",
+          "hash": "dkZlLJURy62DZv8X8W1/WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IHostClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IHostClient.html",
+          "hash": "SoLUUk2pFqhz9VtNOUIWVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IHostWorker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IHostWorker.html",
+          "hash": "d/BJ1+UEwEl06ej/h5phUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.INetworkSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.INetworkSettings.html",
+          "hash": "7XHY+d5lP+O28u59DvIdyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IQueueDispatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IQueueDispatcher-1.html",
+          "hash": "06DMP9VY3WVTZDKU4PvexQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IRoomManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IRoomManager.html",
+          "hash": "Tp+6GwV2y07qX+zEwWvXXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IScheduler.html",
+          "hash": "jz4MeikNR4ArtOhI8tO6TA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.IServiceProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.IServiceProvider.html",
+          "hash": "9KPlOcvUR6CI9aeV+Z5mXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.InPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.InPacket.html",
+          "hash": "53bFlVZqksR69sURkN9SFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.OutPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.OutPacket.html",
+          "hash": "FO24qWvdUSn2PAvEEnNS5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Room.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Room.html",
+          "hash": "tw5SSRkIzvJSN+RTV9C/xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.RoomConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.RoomConnection.html",
+          "hash": "ljUbJvrTGEcT1s2zyW5Ogg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Settings.HostClientSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Settings.HostClientSettings.html",
+          "hash": "0/NAvkRqE+OPW/mpUlulgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Settings.HostSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Settings.HostSettings.html",
+          "hash": "9jvNuO7euyIVr5n4q5287A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Settings.html",
+          "hash": "9RxcFXKoPldWt9/DTVZLkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.Subscription-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.Subscription-1.html",
+          "hash": "cLenRVgZqpwKPpD/+VsFmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.TimerKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.TimerKey.html",
+          "hash": "eb/5HveaPhNI/ijNb45JhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Contracts.html",
+          "hash": "KRgiZGl0ZPrUWZiDLAFxwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.DummyHostClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.DummyHostClient.html",
+          "hash": "tkJhIEcMN682P5CD8FSB2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Host.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Host.html",
+          "hash": "jolKnJ07L47YuVa/7eufqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.HostClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.HostClient.html",
+          "hash": "7NZjrzH8idOHATcF8Y+ysQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.MurMurHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.MurMurHash.html",
+          "hash": "l28K0CYsczXndpYZBR380g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.QueueDispatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.QueueDispatcher-1.html",
+          "hash": "Lc2dlUwldOSJzENk/Ppquw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.RoomManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.RoomManager.html",
+          "hash": "XfiEOiaYlj4m5KKcuBRaNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.Scheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.Scheduler.html",
+          "hash": "7WtkNRw4H6HicUuzfcVoYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.ServiceProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.ServiceProvider.html",
+          "hash": "V013sz+RedwIudjgSfEW2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.SubscriptionStorage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.SubscriptionStorage-1.html",
+          "hash": "E4CGtQfGiWDjzOUhRpst9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Framework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Framework.html",
+          "hash": "mlNslnse4prSkbdqpIK+QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.HostBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.HostBuilder.html",
+          "hash": "aXzrxg9R5UpnZpIpvb0SQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.ILogger.html",
+          "hash": "bJOl6Jk6dBIOYxkkyKKlhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.ILoggerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.ILoggerFactory.html",
+          "hash": "TAvCG4u39TXgpmnUMaJHfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.LogLevel.html",
+          "hash": "bFdt9cpoHNl9NLJkl1ls9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.Serilog.SerilogLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.Serilog.SerilogLogger.html",
+          "hash": "AqQeJdYH9IDmiPNmwU/4/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.Serilog.SerilogLoggerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.Serilog.SerilogLoggerFactory.html",
+          "hash": "csxpPBU/ito1KHZakcrcvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.Serilog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.Serilog.html",
+          "hash": "YzDyeelbRf38j8f17eGRMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.SimpleConsoleLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.SimpleConsoleLogger.html",
+          "hash": "6Ebio8ToiwvhLTEtBNd1ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.SimpleConsoleLoggerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.SimpleConsoleLoggerFactory.html",
+          "hash": "EvKzsyF8Ep52uFlM7YGuCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Logging.html",
+          "hash": "oNY2S1DRil3196S7S/r9Tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.ChannelsFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.ChannelsFactory.html",
+          "hash": "Xx7abOFn1wC+i+AKLkhCtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.NetWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.NetWindow.html",
+          "hash": "xr45AHmMt6bOiK+2vW5G2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.RawUdpChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.RawUdpChannel.html",
+          "hash": "3kIlLHe7AnOgjX77SDXfdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.ReliableChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.ReliableChannel.html",
+          "hash": "AdvpnyjHLAzdEfJ5p0DIlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.ReliableOrderedChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.ReliableOrderedChannel.html",
+          "hash": "XHSLWrrzJUkUNk/8234kjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.SequencedChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.SequencedChannel.html",
+          "hash": "n+FFlxpeXXhB5ydt1OwZyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Channels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Channels.html",
+          "hash": "XXy2D1VCkhQOomFl2c4L3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Clients.UdpClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Clients.UdpClientFactory.html",
+          "hash": "m7tyfbJxLzQ2++43V5JDDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Clients.UdpClientSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Clients.UdpClientSettings.html",
+          "hash": "fKVb1NRcWuN3dgr0gY92/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Clients.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Clients.html",
+          "hash": "A6wQpSWl6W6Rd44QV3ODKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Connections.ConnectionPoolSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Connections.ConnectionPoolSettings.html",
+          "hash": "tV2aBOywZut42RS71CcIVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Connections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Connections.html",
+          "hash": "Fkg/EOCOlvsY4yUHvK2MNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Channels.IChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Channels.IChannel.html",
+          "hash": "whZFVBQZyp7NedMRcmefpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Channels.IChannelsFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Channels.IChannelsFactory.html",
+          "hash": "NESZ1lEiJGsI30LzqSedvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Channels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Channels.html",
+          "hash": "932fAOf6t3htJBex4TMKmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Clients.IUdpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Clients.IUdpClient.html",
+          "hash": "axh5Ci7rVrbupOfi56uohA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Clients.IUdpClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Clients.IUdpClientFactory.html",
+          "hash": "vwYI4cJuKXgUqJAitq0hNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Clients.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Clients.html",
+          "hash": "ivj6h7e0V7TOImc7AUqehQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Connections.IConnectionIdFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Connections.IConnectionIdFactory.html",
+          "hash": "dwzaLLOECRdo86s/S3zYdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Connections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Connections.html",
+          "hash": "yUdJKN2JfNa2qBJE3L7xLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Sockets.ISocket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Sockets.ISocket.html",
+          "hash": "ougtNXrHMn0rlW7i+SnCog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Sockets.ISocketFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Sockets.ISocketFactory.html",
+          "hash": "uqYLMUi6E6GpAerumGGrgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Sockets.IpExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Sockets.IpExtensions.html",
+          "hash": "76Sxa85FDzTGvanQdJ+mSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Sockets.IpV4Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Sockets.IpV4Address.html",
+          "hash": "ihcchyKP8BWxGVp+XpFRxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Contracts.Sockets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Contracts.Sockets.html",
+          "hash": "SegNGt+VPdbrIIVQ7XOaAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.NetworkUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.NetworkUtils.html",
+          "hash": "FojU9ak7tDzzKzM3BJWhuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Sockets.ManagedSocket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Sockets.ManagedSocket.html",
+          "hash": "9HhF5nFsv7ZN/bJZf9Fglw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Sockets.ManagedSocketFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Sockets.ManagedSocketFactory.html",
+          "hash": "uQRHixKa/LA2qfTFHPNtYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Sockets.NativeSocket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Sockets.NativeSocket.html",
+          "hash": "yeNHBwCmyZPZdDm09sv83Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Sockets.NativeSocketFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Sockets.NativeSocketFactory.html",
+          "hash": "8YtRCLvRyELEMARG5GyWYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Sockets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Sockets.html",
+          "hash": "sGHKYFll+gtH+cxcRsQ/fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Utils.DateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Utils.DateTimeProvider.html",
+          "hash": "t8poySPHJVRW8gvZnFbb0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Utils.IDateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Utils.IDateTimeProvider.html",
+          "hash": "HLaUYnXOQArOil9ORwQeLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.Utils.html",
+          "hash": "8YzkzAvaD11CtXgCxlWf4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Network.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Network.html",
+          "hash": "UOX6SgiMHwscrh5l2yIQSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.NetworkSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.NetworkSettings.html",
+          "hash": "SAjn2kbfPwwrO2HyZdt5oQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Serialization.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Serialization.ISerializer.html",
+          "hash": "y3pgrZAbt0bRmLeAUc6JCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Serialization.MsgPack.Serializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Serialization.MsgPack.Serializer.html",
+          "hash": "6+qpBWBzfSM9OR+K3Lc30Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Serialization.MsgPack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Serialization.MsgPack.html",
+          "hash": "BhyxFD+JlyAC8nLD8njJFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.Serialization.html",
+          "hash": "O/LzIxVwve0950MLCFCdrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.UdpHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.UdpHost.html",
+          "hash": "IA/WkYTMLpMp8hSELqj8FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UdpToolkit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UdpToolkit.html",
+          "hash": "dvoS3pnN3Tb6m/QQ5Dt6YQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "fMgbDqkWp7iO20MNQW5KgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "flXO6jDcY0EAfhQYf3pa3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/faq.html",
+          "hash": "3/7RTk+fRX4Q3J9g0dPXEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/how-it-works.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/how-it-works.html",
+          "hash": "5F5bUXUMq9IsFUl+G0VQsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/quick-start-core.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/quick-start-core.html",
+          "hash": "2oAstkmpJ+MQiv1Pj8hpRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/quick-start-unity.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/quick-start-unity.html",
+          "hash": "pCuGLrCSyZYurT+xgZnebQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "documentation/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/toc.html",
+          "hash": "9Qmn0stHpj4tBV5Dvq1tAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cubes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/cubes.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "rh608jzNmRMbTE8saOn+wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "X/4NdTKjlIOCGupf1DXpXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 97,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
