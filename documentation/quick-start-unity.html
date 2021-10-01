@@ -157,7 +157,6 @@ SampleProject.sln
     using UdpToolkit;
     using UdpToolkit.Framework;
     using UdpToolkit.Framework.Contracts;
-    using UdpToolkit.Framework.Contracts.Settings;
 
     public static class Program
     {
@@ -171,11 +170,11 @@ SampleProject.sln
                 onEvent: (connectionId, ip, message) =&gt;
                 {
                     Console.WriteLine($&quot;Message received: {message.Text}&quot;);
-                    host.ServiceProvider.RoomManager
+                    host.ServiceProvider.GroupManager
                         .JoinOrCreate(Guid.Empty, connectionId, ip);
                 });
 
-            // 5) Run host:
+            // 5) Run host.:
             host.Run();
 
             Console.WriteLine(&quot;Press any key..&quot;);
@@ -240,12 +239,11 @@ namespace Shared
 <li><p>Add custom implementation of <code>ISerializer</code> to <code>Assets/Shared/MessagePackCSharpSerializer.cs</code>:</p>
 </li>
 </ol>
-<pre><code class="lang-c#">using System;
-using MessagePack;
-using UdpToolkit.Serialization;
-
-namespace Shared
+<pre><code class="lang-c#">namespace Shared
 {
+    using MessagePack;
+    using UdpToolkit.Serialization;
+
     public class MessagePackCSharpSerializer : ISerializer
     {
         public byte[] Serialize&lt;T&gt;(T item)
@@ -253,7 +251,7 @@ namespace Shared
             return MessagePackSerializer.Serialize(item);
         }
 
-        public T Deserialize&lt;T&gt;(ArraySegment&lt;byte&gt; bytes)
+        public T Deserialize&lt;T&gt;(byte[] bytes)
         {
             return MessagePackSerializer.Deserialize&lt;T&gt;(bytes);
         }
@@ -269,7 +267,6 @@ using Shared;
 using UdpToolkit;
 using UdpToolkit.Framework;
 using UdpToolkit.Framework.Contracts;
-using UdpToolkit.Framework.Contracts.Settings;
 using UdpToolkit.Logging;
 using UdpToolkit.Network.Channels;
 using UnityEngine;
@@ -339,14 +336,14 @@ public class ClientScript : MonoBehaviour
             .CreateHostBuilder()
             .ConfigureHost(hostSettings, settings =&gt;
             {
-                // 3) Assign port:
+                // 3) Assign port
                 settings.HostPorts = new[] { 5000 };
-                // 4) Replace default logger implementation: 
+                // 4) Replace default logger implementation 
                 settings.LoggerFactory = new UnityLoggerFactory(LogLevel.Debug);
             })
             .ConfigureHostClient(settings =&gt;
             {
-                // 5) Specify remote host port:
+                // 5) Specify remote host port
                 settings.ServerPorts = new[] { 7000 };
             })
             .BootstrapWorker(new HostWorkerGenerated())

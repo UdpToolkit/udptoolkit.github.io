@@ -170,13 +170,13 @@
   
   
   <a id="UdpToolkit_Framework_Contracts_IHostWorker_Process_" data-uid="UdpToolkit.Framework.Contracts.IHostWorker.Process*"></a>
-  <h4 id="UdpToolkit_Framework_Contracts_IHostWorker_Process_UdpToolkit_Framework_Contracts_OutPacket_" data-uid="UdpToolkit.Framework.Contracts.IHostWorker.Process(UdpToolkit.Framework.Contracts.OutPacket)">Process(OutPacket)</h4>
+  <h4 id="UdpToolkit_Framework_Contracts_IHostWorker_Process_UdpToolkit_Framework_Contracts_OutPacket_System_Byte____System_Byte__" data-uid="UdpToolkit.Framework.Contracts.IHostWorker.Process(UdpToolkit.Framework.Contracts.OutPacket,System.Byte[]@,System.Byte@)">Process(OutPacket, out Byte[], out Byte)</h4>
   <div class="markdown level1 summary"><p>Process output packet.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">byte[] Process(OutPacket outPacket)</code></pre>
+    <pre><code class="lang-csharp hljs">bool Process(OutPacket outPacket, out byte[] payload, out byte subscriptionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,6 +194,18 @@
         <td><p>Output packet.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">payload</span></td>
+        <td><p>Payload in bytes representation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">subscriptionId</span></td>
+        <td><p>Subscription identifier.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -206,7 +218,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="xref">System.Boolean</span></td>
         <td><p>An array of bytes for sending over the network.</p>
 </td>
       </tr>

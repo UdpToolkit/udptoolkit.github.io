@@ -92,13 +92,13 @@
   
   
   <a id="UdpToolkit_Framework_Contracts_InPacket__ctor_" data-uid="UdpToolkit.Framework.Contracts.InPacket.#ctor*"></a>
-  <h4 id="UdpToolkit_Framework_Contracts_InPacket__ctor_System_Byte___System_Guid_UdpToolkit_Network_Contracts_Sockets_IpV4Address_System_Byte_System_Boolean_" data-uid="UdpToolkit.Framework.Contracts.InPacket.#ctor(System.Byte[],System.Guid,UdpToolkit.Network.Contracts.Sockets.IpV4Address,System.Byte,System.Boolean)">InPacket(Byte[], Guid, IpV4Address, Byte, Boolean)</h4>
+  <h4 id="UdpToolkit_Framework_Contracts_InPacket__ctor_System_Byte___System_Guid_System_Byte_UdpToolkit_Network_Contracts_Sockets_IpV4Address_System_Byte_System_Boolean_" data-uid="UdpToolkit.Framework.Contracts.InPacket.#ctor(System.Byte[],System.Guid,System.Byte,UdpToolkit.Network.Contracts.Sockets.IpV4Address,System.Byte,System.Boolean)">InPacket(Byte[], Guid, Byte, IpV4Address, Byte, Boolean)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="UdpToolkit.Framework.Contracts.InPacket.html">InPacket</a> struct.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InPacket(byte[] payload, Guid connectionId, IpV4Address ipV4Address, byte channelId, bool expired)</code></pre>
+    <pre><code class="lang-csharp hljs">public InPacket(byte[] payload, Guid connectionId, byte subscriptionId, IpV4Address ipV4Address, byte channelId, bool expired)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,6 +120,12 @@
         <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">connectionId</span></td>
         <td><p>Connection identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">subscriptionId</span></td>
+        <td><p>Subscription identifier.</p>
 </td>
       </tr>
       <tr>
@@ -270,6 +276,32 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Framework_Contracts_InPacket_SubscriptionId_" data-uid="UdpToolkit.Framework.Contracts.InPacket.SubscriptionId*"></a>
+  <h4 id="UdpToolkit_Framework_Contracts_InPacket_SubscriptionId" data-uid="UdpToolkit.Framework.Contracts.InPacket.SubscriptionId">SubscriptionId</h4>
+  <div class="markdown level1 summary"><p>Gets subscription identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte SubscriptionId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
         <td></td>
       </tr>
     </tbody>

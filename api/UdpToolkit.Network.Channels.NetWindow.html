@@ -122,33 +122,15 @@
   </h3>
   
   
-  <a id="UdpToolkit_Network_Channels_NetWindow_CanSet_" data-uid="UdpToolkit.Network.Channels.NetWindow.CanSet*"></a>
-  <h4 id="UdpToolkit_Network_Channels_NetWindow_CanSet_System_UInt16_" data-uid="UdpToolkit.Network.Channels.NetWindow.CanSet(System.UInt16)">CanSet(UInt16)</h4>
-  <div class="markdown level1 summary"><p>Check free slot in network window before insert.</p>
+  <a id="UdpToolkit_Network_Channels_NetWindow_GetNextPacketId_" data-uid="UdpToolkit.Network.Channels.NetWindow.GetNextPacketId*"></a>
+  <h4 id="UdpToolkit_Network_Channels_NetWindow_GetNextPacketId" data-uid="UdpToolkit.Network.Channels.NetWindow.GetNextPacketId">GetNextPacketId()</h4>
+  <div class="markdown level1 summary"><p>Generate next packet id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanSet(ushort id)</code></pre>
+    <pre><code class="lang-csharp hljs">public ushort GetNextPacketId()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Packet id.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -159,64 +141,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>true - can set
-false - can't set.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="UdpToolkit_Network_Channels_NetWindow_InsertPacketData_" data-uid="UdpToolkit.Network.Channels.NetWindow.InsertPacketData*"></a>
-  <h4 id="UdpToolkit_Network_Channels_NetWindow_InsertPacketData_System_UInt16_System_UInt32_System_Boolean_" data-uid="UdpToolkit.Network.Channels.NetWindow.InsertPacketData(System.UInt16,System.UInt32,System.Boolean)">InsertPacketData(UInt16, UInt32, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Insert packet data in network window.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InsertPacketData(ushort id, uint acks, bool acked)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
         <td><span class="xref">System.UInt16</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Packet ids.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">acks</span></td>
-        <td><p>32 bits history of packet.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">acked</span></td>
-        <td><p>Flag for represent state of packet.</p>
+        <td><p>Packet id.</p>
 </td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="UdpToolkit_Network_Channels_NetWindow_IsDelivered_" data-uid="UdpToolkit.Network.Channels.NetWindow.IsDelivered*"></a>
-  <h4 id="UdpToolkit_Network_Channels_NetWindow_IsDelivered_System_UInt16_" data-uid="UdpToolkit.Network.Channels.NetWindow.IsDelivered(System.UInt16)">IsDelivered(UInt16)</h4>
+  <a id="UdpToolkit_Network_Channels_NetWindow_GetPacketData_" data-uid="UdpToolkit.Network.Channels.NetWindow.GetPacketData*"></a>
+  <h4 id="UdpToolkit_Network_Channels_NetWindow_GetPacketData_System_UInt16_" data-uid="UdpToolkit.Network.Channels.NetWindow.GetPacketData(System.UInt16)">GetPacketData(UInt16)</h4>
   <div class="markdown level1 summary"><p>Check the delivery status of a packet.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDelivered(ushort id)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool GetPacketData(ushort id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,41 +195,14 @@ false - packet not delivered.</p>
   </table>
   
   
-  <a id="UdpToolkit_Network_Channels_NetWindow_Next_" data-uid="UdpToolkit.Network.Channels.NetWindow.Next*"></a>
-  <h4 id="UdpToolkit_Network_Channels_NetWindow_Next" data-uid="UdpToolkit.Network.Channels.NetWindow.Next">Next()</h4>
-  <div class="markdown level1 summary"><p>Generate next packet id.</p>
+  <a id="UdpToolkit_Network_Channels_NetWindow_InsertPacketData_" data-uid="UdpToolkit.Network.Channels.NetWindow.InsertPacketData*"></a>
+  <h4 id="UdpToolkit_Network_Channels_NetWindow_InsertPacketData_System_UInt16_System_Boolean_" data-uid="UdpToolkit.Network.Channels.NetWindow.InsertPacketData(System.UInt16,System.Boolean)">InsertPacketData(UInt16, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Insert packet data in network window.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort Next()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td><p>Packet id.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="UdpToolkit_Network_Channels_NetWindow_TryAcceptAck_" data-uid="UdpToolkit.Network.Channels.NetWindow.TryAcceptAck*"></a>
-  <h4 id="UdpToolkit_Network_Channels_NetWindow_TryAcceptAck_System_UInt16_System_UInt32_" data-uid="UdpToolkit.Network.Channels.NetWindow.TryAcceptAck(System.UInt16,System.UInt32)">TryAcceptAck(UInt16, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Try accept ack.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryAcceptAck(ushort id, uint acks)</code></pre>
+    <pre><code class="lang-csharp hljs">public void InsertPacketData(ushort id, bool acknowledged)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,30 +217,13 @@ false - packet not delivered.</p>
       <tr>
         <td><span class="xref">System.UInt16</span></td>
         <td><span class="parametername">id</span></td>
-        <td><p>Packet id.</p>
+        <td><p>Packet ids.</p>
 </td>
       </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">acks</span></td>
-        <td><p>32 bit packet history.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>true - ack accepted
-false - ack not accepted.</p>
+        <td><span class="parametername">acknowledged</span></td>
+        <td><p>State of packet delivery.</p>
 </td>
       </tr>
     </tbody>

@@ -72,7 +72,7 @@
 <p>UdpToolkit consists of two main parts:</p>
 <ul>
 <li>Network for working with bytes, IP addresses, custom network headers e.t.c.</li>
-<li>Framework for working with logic of your game like <code>Move</code>, <code>Shot</code>, <code>Heal</code>, <code>Join</code> events e.t.c.</li>
+<li>Framework for handle user-defined events like <code>Move</code>, <code>Shot</code>, <code>Heal</code>, <code>Join</code> e.t.c.</li>
 </ul>
 <h2 id="network">Network</h2>
 <h3 id="network-protocol">Network protocol</h3>
@@ -122,7 +122,14 @@
 <td>PacketType</td>
 <td>PacketType</td>
 <td>1</td>
-<td>Packet type.</td>
+<td>Packet type (bit flag).</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>DataType</td>
+<td>byte</td>
+<td>1</td>
+<td>Type of user-defined event/subscription. Used for serialization/deserialization and support counter per each event in the sequenced channels.</td>
 </tr>
 </tbody>
 </table>
@@ -196,15 +203,9 @@
 <h3 id="expansion-points">Expansion points</h3>
 <p><code>ISocket</code> - For performance reasons default sockets in <code>UdpToolkit</code> are written in C, but very difficult to support this solution for all possible platforms. Fallback on managed version always available.</p>
 <p><code>IChannel</code> - Unfortunately, no silver bullet for reliable UDP protocols if you want to implement your own mechanism for working with the <code>Protocol header</code> you could implement a custom channel. All actions in the scope of the channel are thread-safe.</p>
-<p><code>IConnectionIdFactory</code> - By default <code>ConnectionId</code> is generated randomly if you want to change this behavior just pass the alternative implementation.</p>
 <h2 id="framework">Framework</h2>
-<h3 id="framework-protocol">Framework protocol</h3>
-<p><code>|framework header|payload|</code></p>
-<h3 id="protocol-header-explicit">Protocol header (Explicit)</h3>
-<p>Consist only of 1 byte per user-defined event. This byte is assigned automatically when code-generation for user-defined types run. You could find all generated values in the <code>HostWorkerGenerated.cs</code> file.
-Required for matching user-defined types with serialization actions.</p>
-<h3 id="protocol-header-implicit">Protocol header (Implicit)</h3>
-<p>The client should include <code>RoomId:Guid</code> (16 bytes) in each event. This is required to restrict broadcasting scope on the framework side.</p>
+<h3 id="framework-protocol-implicit">Framework protocol (Implicit)</h3>
+<p>The client should include <code>GroupId:Guid</code> (16 bytes) in each event. This is required to restrict broadcasting scope on the framework side.</p>
 <h3 id="concurrency">Concurrency</h3>
 <p>All actions performed in <code>onEvent</code> callback are not thread-safe. This is absolutely the same behavior as in popular web frameworks for .net like <code>asp.net core</code> or <code>GRPC</code>.</p>
 <p>Note: But each connection deterministically dispatches into the same thread and all events from this connection are processed by the same thread.</p>
@@ -215,7 +216,7 @@ Required for matching user-defined types with serialization actions.</p>
         Console.WriteLine($&quot;Message received: {message.Text}&quot;);
     });
 </code></pre>
-<p>For thread-safe events processing in-room scope, you could use other libraries or implement locking (named lock) the room by yourself.</p>
+<p>For thread-safe events processing in-room scope, you could use other libraries or implement locking the room by yourself.</p>
 </article>
           </div>
           

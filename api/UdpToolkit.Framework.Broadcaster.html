@@ -97,13 +97,13 @@
   
   
   <a id="UdpToolkit_Framework_Broadcaster__ctor_" data-uid="UdpToolkit.Framework.Broadcaster.#ctor*"></a>
-  <h4 id="UdpToolkit_Framework_Broadcaster__ctor_UdpToolkit_Framework_Contracts_IRoomManager_UdpToolkit_Framework_Contracts_IQueueDispatcher_UdpToolkit_Framework_Contracts_OutPacket__" data-uid="UdpToolkit.Framework.Broadcaster.#ctor(UdpToolkit.Framework.Contracts.IRoomManager,UdpToolkit.Framework.Contracts.IQueueDispatcher{UdpToolkit.Framework.Contracts.OutPacket})">Broadcaster(IRoomManager, IQueueDispatcher&lt;OutPacket&gt;)</h4>
+  <h4 id="UdpToolkit_Framework_Broadcaster__ctor_UdpToolkit_Framework_Contracts_IGroupManager_UdpToolkit_Framework_Contracts_IQueueDispatcher_UdpToolkit_Framework_Contracts_OutPacket__" data-uid="UdpToolkit.Framework.Broadcaster.#ctor(UdpToolkit.Framework.Contracts.IGroupManager,UdpToolkit.Framework.Contracts.IQueueDispatcher{UdpToolkit.Framework.Contracts.OutPacket})">Broadcaster(IGroupManager, IQueueDispatcher&lt;OutPacket&gt;)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="UdpToolkit.Framework.Broadcaster.html">Broadcaster</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Broadcaster(IRoomManager roomManager, IQueueDispatcher&lt;OutPacket&gt; outQueueDispatcher)</code></pre>
+    <pre><code class="lang-csharp hljs">public Broadcaster(IGroupManager groupManager, IQueueDispatcher&lt;OutPacket&gt; outQueueDispatcher)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,9 +116,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="UdpToolkit.Framework.Contracts.IRoomManager.html">IRoomManager</a></td>
-        <td><span class="parametername">roomManager</span></td>
-        <td><p>Instance of room manager.</p>
+        <td><a class="xref" href="UdpToolkit.Framework.Contracts.IGroupManager.html">IGroupManager</a></td>
+        <td><span class="parametername">groupManager</span></td>
+        <td><p>Instance of group manager.</p>
 </td>
       </tr>
       <tr>
@@ -140,7 +140,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Broadcast&lt;TEvent&gt;(Guid caller, Guid roomId, TEvent event, byte channelId, BroadcastMode broadcastMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Broadcast&lt;TEvent&gt;(Guid caller, Guid groupId, TEvent event, byte channelId, BroadcastMode broadcastMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,8 +160,8 @@
       </tr>
       <tr>
         <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">roomId</span></td>
-        <td><p>Room identifier.</p>
+        <td><span class="parametername">groupId</span></td>
+        <td><p>Group identifier.</p>
 </td>
       </tr>
       <tr>

@@ -77,20 +77,14 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.BlockingAsyncQueue-1.html">BlockingAsyncQueue&lt;TItem&gt;</a></h4>
-      <section><p>Async queue based on .NET BlockingCollection.</p>
-</section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.BroadcastMode.html">BroadcastMode</a></h4>
       <section><p>Broadcast mode.</p>
 </section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.ConnectionIdFactory.html">ConnectionIdFactory</a></h4>
-      <section><p>Default implementation of IConnectionIdFactory generates random connection identifiers.</p>
+      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.Group.html">Group</a></h4>
+      <section><p>Represent logical scope of connections.</p>
 </section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.DateTimeProvider.html">DateTimeProvider</a></h4>
-      <section><p>Abstraction for providing current Utc DateTimeOffset.</p>
-</section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.HostClientSettingsInternal.html">HostClientSettingsInternal</a></h4>
-      <section><p>Internal client settings.</p>
+      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.GroupConnection.html">GroupConnection</a></h4>
+      <section><p>Information about connection in the group.</p>
 </section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.HostExtensions.html">HostExtensions</a></h4>
       <section><p>Extensions for creating subscriptions on events.</p>
@@ -101,11 +95,8 @@
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.OutPacket.html">OutPacket</a></h4>
       <section><p>Outgoing host packet.</p>
 </section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.Room.html">Room</a></h4>
-      <section><p>Represent logical scope of connections.</p>
-</section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.RoomConnection.html">RoomConnection</a></h4>
-      <section><p>Information about connection in the room.</p>
+      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.SchedulerExtensions.html">SchedulerExtensions</a></h4>
+      <section><p>Extensions for Scheduler.</p>
 </section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.Subscription-1.html">Subscription&lt;TEvent&gt;</a></h4>
       <section><p>Subscription on event.</p>
@@ -124,11 +115,14 @@
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IDateTimeProvider.html">IDateTimeProvider</a></h4>
       <section><p>Abstraction for providing current Utc DateTimeOffset.</p>
 </section>
+      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IExecutor.html">IExecutor</a></h4>
+      <section><p>Abstraction for a run any actions in Threads, Tasks, Unity Jobs System e.t.c.</p>
+</section>
+      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IGroupManager.html">IGroupManager</a></h4>
+      <section><p>Abstraction for managing groups of connections.</p>
+</section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IHost.html">IHost</a></h4>
       <section><p>Host, keep together sending, receiving, and processing logic.</p>
-</section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IHostBuilder.html">IHostBuilder</a></h4>
-      <section><p>Abstraction for host configuration in a fluent style.</p>
 </section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IHostClient.html">IHostClient</a></h4>
       <section><p>Client for interacting wih other hosts.</p>
@@ -140,10 +134,7 @@
       <section><p>Network settings.</p>
 </section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IQueueDispatcher-1.html">IQueueDispatcher&lt;TItem&gt;</a></h4>
-      <section><p>QueueDispatcher, abstraction for dispatch all data from connection each time into the same queue.</p>
-</section>
-      <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IRoomManager.html">IRoomManager</a></h4>
-      <section><p>Abstraction for managing room connections.</p>
+      <section><p>Abstraction for dispatch all data from connection each time into the same queue.</p>
 </section>
       <h4><a class="xref" href="UdpToolkit.Framework.Contracts.IScheduler.html">IScheduler</a></h4>
       <section><p>Abstraction for executing delayed actions.</p>

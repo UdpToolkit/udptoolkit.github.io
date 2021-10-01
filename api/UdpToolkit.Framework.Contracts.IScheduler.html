@@ -87,13 +87,13 @@
   
   
   <a id="UdpToolkit_Framework_Contracts_IScheduler_Schedule_" data-uid="UdpToolkit.Framework.Contracts.IScheduler.Schedule*"></a>
-  <h4 id="UdpToolkit_Framework_Contracts_IScheduler_Schedule__1___0_System_Guid_UdpToolkit_Framework_Contracts_TimerKey_System_TimeSpan_System_Action_System_Guid___0_UdpToolkit_Framework_Contracts_IRoomManager_UdpToolkit_Framework_Contracts_IBroadcaster__" data-uid="UdpToolkit.Framework.Contracts.IScheduler.Schedule``1(``0,System.Guid,UdpToolkit.Framework.Contracts.TimerKey,System.TimeSpan,System.Action{System.Guid,``0,UdpToolkit.Framework.Contracts.IRoomManager,UdpToolkit.Framework.Contracts.IBroadcaster})">Schedule&lt;TInEvent&gt;(TInEvent, Guid, TimerKey, TimeSpan, Action&lt;Guid, TInEvent, IRoomManager, IBroadcaster&gt;)</h4>
+  <h4 id="UdpToolkit_Framework_Contracts_IScheduler_Schedule_UdpToolkit_Framework_Contracts_TimerKey_System_TimeSpan_System_TimeSpan_System_Nullable_System_TimeSpan__System_Action_" data-uid="UdpToolkit.Framework.Contracts.IScheduler.Schedule(UdpToolkit.Framework.Contracts.TimerKey,System.TimeSpan,System.TimeSpan,System.Nullable{System.TimeSpan},System.Action)">Schedule(TimerKey, TimeSpan, TimeSpan, Nullable&lt;TimeSpan&gt;, Action)</h4>
   <div class="markdown level1 summary"><p>Schedules action with a specified delay.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Schedule&lt;TInEvent&gt;(TInEvent inEvent, Guid caller, TimerKey timerKey, TimeSpan dueTime, Action&lt;Guid, TInEvent, IRoomManager, IBroadcaster&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">void Schedule(TimerKey timerKey, TimeSpan delay, TimeSpan frequency, Nullable&lt;TimeSpan&gt; ttl, Action action)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,18 +106,6 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TInEvent</span></td>
-        <td><span class="parametername">inEvent</span></td>
-        <td><p>Instance of inEvent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">caller</span></td>
-        <td><p>Sending initiator.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="UdpToolkit.Framework.Contracts.TimerKey.html">TimerKey</a></td>
         <td><span class="parametername">timerKey</span></td>
         <td><p>Compound key for timer.</p>
@@ -125,34 +113,40 @@
       </tr>
       <tr>
         <td><span class="xref">System.TimeSpan</span></td>
-        <td><span class="parametername">dueTime</span></td>
+        <td><span class="parametername">delay</span></td>
         <td><p>Period of time for delay.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Guid</span>, TInEvent, <a class="xref" href="UdpToolkit.Framework.Contracts.IRoomManager.html">IRoomManager</a>, <a class="xref" href="UdpToolkit.Framework.Contracts.IBroadcaster.html">IBroadcaster</a>&gt;</td>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">frequency</span></td>
+        <td><p>Frequency of repetitions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><span class="parametername">ttl</span></td>
+        <td><p>TTL for created timer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">action</span></td>
         <td><p>Scheduled action.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TInEvent</span></td>
-        <td><p>Type of InEvent.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="UdpToolkit.Framework.Contracts.SchedulerExtensions.html#UdpToolkit_Framework_Contracts_SchedulerExtensions_Schedule__1_UdpToolkit_Framework_Contracts_IScheduler_System_Action_System_TimeSpan_">SchedulerExtensions.Schedule&lt;TEvent&gt;(IScheduler, Action, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="UdpToolkit.Framework.Contracts.SchedulerExtensions.html#UdpToolkit_Framework_Contracts_SchedulerExtensions_ScheduleOnce__1_UdpToolkit_Framework_Contracts_IScheduler_System_Guid_System_Action_System_TimeSpan_">SchedulerExtensions.ScheduleOnce&lt;TEvent&gt;(IScheduler, Guid, Action, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="UdpToolkit.Framework.Contracts.SchedulerExtensions.html#UdpToolkit_Framework_Contracts_SchedulerExtensions_ScheduleRepeatable__1_UdpToolkit_Framework_Contracts_IScheduler_System_Guid_System_Action_System_TimeSpan_System_TimeSpan_">SchedulerExtensions.ScheduleRepeatable&lt;TEvent&gt;(IScheduler, Guid, Action, TimeSpan, TimeSpan)</a>
+  </div>
 </article>
           </div>
           

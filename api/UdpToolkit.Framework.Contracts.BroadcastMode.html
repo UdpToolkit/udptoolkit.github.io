@@ -92,7 +92,7 @@
   
   
   <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_Caller" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.Caller">Caller</h4>
-  <div class="markdown level1 summary"><p>The event will be processed by callback with broadcasting to the caller.</p>
+  <div class="markdown level1 summary"><p>The event will be processed by subscription with broadcasting to the caller.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -116,8 +116,58 @@
   </table>
   
   
+  <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_Group" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.Group">Group</h4>
+  <div class="markdown level1 summary"><p>The event will be processed by subscription with broadcasting to all group clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const BroadcastMode Group</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Framework.Contracts.BroadcastMode.html">BroadcastMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_GroupExceptCaller" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.GroupExceptCaller">GroupExceptCaller</h4>
+  <div class="markdown level1 summary"><p>The event will be processed by subscription with broadcasting to all group clients except the caller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const BroadcastMode GroupExceptCaller</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Framework.Contracts.BroadcastMode.html">BroadcastMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_None" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.None">None</h4>
-  <div class="markdown level1 summary"><p>The event will be processed by callback without broadcasting.</p>
+  <div class="markdown level1 summary"><p>The event will be processed by subscription without broadcasting.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -141,58 +191,8 @@
   </table>
   
   
-  <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_Room" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.Room">Room</h4>
-  <div class="markdown level1 summary"><p>The event will be processed by callback with broadcasting to all room clients.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const BroadcastMode Room</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="UdpToolkit.Framework.Contracts.BroadcastMode.html">BroadcastMode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_RoomExceptCaller" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.RoomExceptCaller">RoomExceptCaller</h4>
-  <div class="markdown level1 summary"><p>The event will be processed by callback with broadcasting to all room clients except the caller.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const BroadcastMode RoomExceptCaller</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="UdpToolkit.Framework.Contracts.BroadcastMode.html">BroadcastMode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="UdpToolkit_Framework_Contracts_BroadcastMode_Server" data-uid="UdpToolkit.Framework.Contracts.BroadcastMode.Server">Server</h4>
-  <div class="markdown level1 summary"><p>The event will be processed by callback with broadcasting to all server clients (not implemented).</p>
+  <div class="markdown level1 summary"><p>The event will be processed by subscription with broadcasting to all server clients (not implemented).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

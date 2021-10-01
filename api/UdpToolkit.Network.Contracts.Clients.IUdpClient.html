@@ -87,13 +87,13 @@
   
   
   <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Connect_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Connect*"></a>
-  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Connect_UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Connect(UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Connect(IpV4Address)</h4>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Connect_UdpToolkit_Network_Contracts_Sockets_IpV4Address_System_Nullable_System_Guid__" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Connect(UdpToolkit.Network.Contracts.Sockets.IpV4Address,System.Nullable{System.Guid})">Connect(IpV4Address, Nullable&lt;Guid&gt;)</h4>
   <div class="markdown level1 summary"><p>Connect to another UDP client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Connect(IpV4Address ipV4Address)</code></pre>
+    <pre><code class="lang-csharp hljs">void Connect(IpV4Address ipV4Address, Nullable&lt;Guid&gt; connectionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -109,6 +109,12 @@
         <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
         <td><span class="parametername">ipV4Address</span></td>
         <td><p>Destination ip address.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">connectionId</span></td>
+        <td><p>Connection identifier.</p>
 </td>
       </tr>
     </tbody>
@@ -138,6 +144,33 @@
         <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
         <td><span class="parametername">ipV4Address</span></td>
         <td><p>Another UDP client address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_GetLocalIp_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.GetLocalIp*"></a>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_GetLocalIp" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.GetLocalIp">GetLocalIp()</h4>
+  <div class="markdown level1 summary"><p>Get local ip address of udp client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IpV4Address GetLocalIp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a></td>
+        <td><p>Local ip address of udp client.</p>
 </td>
       </tr>
     </tbody>
@@ -219,13 +252,13 @@
   
   
   <a id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Send_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Send*"></a>
-  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Send_System_Guid_System_Byte_System_Byte___UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Send(System.Guid,System.Byte,System.Byte[],UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Send(Guid, Byte, Byte[], IpV4Address)</h4>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_Send_System_Guid_System_Byte_System_Byte_System_Byte___UdpToolkit_Network_Contracts_Sockets_IpV4Address_" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.Send(System.Guid,System.Byte,System.Byte,System.Byte[],UdpToolkit.Network.Contracts.Sockets.IpV4Address)">Send(Guid, Byte, Byte, Byte[], IpV4Address)</h4>
   <div class="markdown level1 summary"><p>Send user-defined packets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Send(Guid connectionId, byte channelId, byte[] bytes, IpV4Address ipV4Address)</code></pre>
+    <pre><code class="lang-csharp hljs">void Send(Guid connectionId, byte channelId, byte dataType, byte[] bytes, IpV4Address ipV4Address)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,13 +273,19 @@
       <tr>
         <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">connectionId</span></td>
-        <td><p>ConnectionId.</p>
+        <td><p>Connection identifier.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">channelId</span></td>
-        <td><p>ChannelId.</p>
+        <td><p>Channel identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td><p>Type of data.</p>
 </td>
       </tr>
       <tr>
@@ -383,13 +422,13 @@ TimeSpan - rtt for specific connection</p>
 </div>
   
   
-  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketExpired" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnPacketExpired">OnPacketExpired</h4>
-  <div class="markdown level1 summary"><p>Raised when user-defined packet expired.</p>
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnInvalidPacketReceived" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnInvalidPacketReceived">OnInvalidPacketReceived</h4>
+  <div class="markdown level1 summary"><p>Raised when received packet with invalid network header.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte&gt; OnPacketExpired</code></pre>
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, byte[]&gt; OnInvalidPacketReceived</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,7 +440,71 @@ TimeSpan - rtt for specific connection</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Byte</span>[]&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnInvalidPacketReceived_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IpV4Address - source ip
+Guid - connectionId
+byte[] - payload without network header
+byte - channel
+byte - dataType</p>
+</div>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketDropped" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnPacketDropped">OnPacketDropped</h4>
+  <div class="markdown level1 summary"><p>Raised when outgoing packet dropped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte, byte&gt; OnPacketDropped</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>, <span class="xref">System.Byte</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketDropped_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>IpV4Address - source ip
+Guid - connectionId
+byte[] - payload without network header
+byte - channel
+byte - dataType</p>
+</div>
+  
+  
+  <h4 id="UdpToolkit_Network_Contracts_Clients_IUdpClient_OnPacketExpired" data-uid="UdpToolkit.Network.Contracts.Clients.IUdpClient.OnPacketExpired">OnPacketExpired</h4>
+  <div class="markdown level1 summary"><p>Raised when user-defined packet expired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte, byte&gt; OnPacketExpired</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>, <span class="xref">System.Byte</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -410,7 +513,8 @@ TimeSpan - rtt for specific connection</p>
   <div class="markdown level1 remarks"><p>IpV4Address - source ip
 Guid - connectionId
 byte[] - payload without network header
-byte - channel</p>
+byte - channel
+byte - dataType</p>
 </div>
   
   
@@ -420,7 +524,7 @@ byte - channel</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte&gt; OnPacketReceived</code></pre>
+    <pre><code class="lang-csharp hljs">event Action&lt;IpV4Address, Guid, byte[], byte, byte&gt; OnPacketReceived</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,7 +536,7 @@ byte - channel</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="UdpToolkit.Network.Contracts.Sockets.IpV4Address.html">IpV4Address</a>, <span class="xref">System.Guid</span>, <span class="xref">System.Byte</span>[], <span class="xref">System.Byte</span>, <span class="xref">System.Byte</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -441,7 +545,8 @@ byte - channel</p>
   <div class="markdown level1 remarks"><p>IpV4Address - source ip
 Guid - connectionId
 byte[] - payload without network header
-byte - channel</p>
+byte - channel
+byte - dataType</p>
 </div>
 </article>
           </div>

@@ -87,24 +87,42 @@
   
   
   <a id="UdpToolkit_Framework_Contracts_IHostClient_Connect_" data-uid="UdpToolkit.Framework.Contracts.IHostClient.Connect*"></a>
-  <h4 id="UdpToolkit_Framework_Contracts_IHostClient_Connect" data-uid="UdpToolkit.Framework.Contracts.IHostClient.Connect">Connect()</h4>
+  <h4 id="UdpToolkit_Framework_Contracts_IHostClient_Connect_System_Nullable_System_Guid__" data-uid="UdpToolkit.Framework.Contracts.IHostClient.Connect(System.Nullable{System.Guid})">Connect(Nullable&lt;Guid&gt;)</h4>
   <div class="markdown level1 summary"><p>Connect to the remote host.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Connect()</code></pre>
+    <pre><code class="lang-csharp hljs">void Connect(Nullable&lt;Guid&gt; connectionId = null)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">connectionId</span></td>
+        <td><p>Connection identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="UdpToolkit_Framework_Contracts_IHostClient_Connect_" data-uid="UdpToolkit.Framework.Contracts.IHostClient.Connect*"></a>
-  <h4 id="UdpToolkit_Framework_Contracts_IHostClient_Connect_System_String_System_Int32_" data-uid="UdpToolkit.Framework.Contracts.IHostClient.Connect(System.String,System.Int32)">Connect(String, Int32)</h4>
+  <h4 id="UdpToolkit_Framework_Contracts_IHostClient_Connect_System_String_System_Int32_System_Nullable_System_Guid__" data-uid="UdpToolkit.Framework.Contracts.IHostClient.Connect(System.String,System.Int32,System.Nullable{System.Guid})">Connect(String, Int32, Nullable&lt;Guid&gt;)</h4>
   <div class="markdown level1 summary"><p>Connect to the remote host.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Connect(string host, int port)</code></pre>
+    <pre><code class="lang-csharp hljs">void Connect(string host, int port, Nullable&lt;Guid&gt; connectionId = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,6 +144,12 @@
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
         <td><p>The port of the remote host.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">connectionId</span></td>
+        <td><p>Connection identifier.</p>
 </td>
       </tr>
     </tbody>

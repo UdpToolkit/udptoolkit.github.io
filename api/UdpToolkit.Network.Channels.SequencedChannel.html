@@ -96,14 +96,32 @@
   
   
   <a id="UdpToolkit_Network_Channels_SequencedChannel__ctor_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.#ctor*"></a>
-  <h4 id="UdpToolkit_Network_Channels_SequencedChannel__ctor" data-uid="UdpToolkit.Network.Channels.SequencedChannel.#ctor">SequencedChannel()</h4>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel__ctor_System_UInt16___" data-uid="UdpToolkit.Network.Channels.SequencedChannel.#ctor(System.UInt16[])">SequencedChannel(UInt16[])</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="UdpToolkit.Network.Channels.SequencedChannel.html">SequencedChannel</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SequencedChannel()</code></pre>
+    <pre><code class="lang-csharp hljs">public SequencedChannel(ushort[] sequences)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span>[]</td>
+        <td><span class="parametername">sequences</span></td>
+        <td><p>Buffer for counters of sequences.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
@@ -161,14 +179,14 @@
   </table>
   
   
-  <a id="UdpToolkit_Network_Channels_SequencedChannel_IsReliable_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.IsReliable*"></a>
-  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_IsReliable" data-uid="UdpToolkit.Network.Channels.SequencedChannel.IsReliable">IsReliable</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether a reliability requirement.</p>
+  <a id="UdpToolkit_Network_Channels_SequencedChannel_ResendOnHeartbeat_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.ResendOnHeartbeat*"></a>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_ResendOnHeartbeat" data-uid="UdpToolkit.Network.Channels.SequencedChannel.ResendOnHeartbeat">ResendOnHeartbeat</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether a resending on heartbeat requirement.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsReliable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ResendOnHeartbeat { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,22 +203,17 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="UdpToolkit_Network_Channels_SequencedChannel_IsReliable_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>true - for checking pending packets on heartbeat events and resend them.
-false - for ignore checking pending packets.</p>
-</div>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="UdpToolkit_Network_Channels_SequencedChannel_HandleAck_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleAck*"></a>
-  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_HandleAck_System_UInt16_System_UInt32_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleAck(System.UInt16,System.UInt32)">HandleAck(UInt16, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Handle incoming acknowledge packets.</p>
-</div>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_HandleAck_UdpToolkit_Network_Contracts_Protocol_NetworkHeader__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleAck(UdpToolkit.Network.Contracts.Protocol.NetworkHeader@)">HandleAck(NetworkHeader)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HandleAck(ushort id, uint acks)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HandleAck(in NetworkHeader networkHeader)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,16 +226,9 @@ false - for ignore checking pending packets.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Packet id.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">acks</span></td>
-        <td><p>32 bits of history about previous packets (not implemented but reserved).</p>
-</td>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><span class="parametername">networkHeader</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -237,22 +243,19 @@ false - for ignore checking pending packets.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>true - acknowledge packet accepted
-false - acknowledge packet dropped.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="UdpToolkit_Network_Channels_SequencedChannel_HandleInputPacket_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleInputPacket*"></a>
-  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_HandleInputPacket_System_UInt16_System_UInt32_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleInputPacket(System.UInt16,System.UInt32)">HandleInputPacket(UInt16, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Handle input packets.</p>
-</div>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_HandleInputPacket_UdpToolkit_Network_Contracts_Protocol_NetworkHeader__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleInputPacket(UdpToolkit.Network.Contracts.Protocol.NetworkHeader@)">HandleInputPacket(NetworkHeader)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HandleInputPacket(ushort id, uint acks)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HandleInputPacket(in NetworkHeader networkHeader)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,16 +268,9 @@ false - acknowledge packet dropped.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Packet id.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">acks</span></td>
-        <td><p>32 bits of history about previous packets (not implemented but reserved).</p>
-</td>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><span class="parametername">networkHeader</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -289,22 +285,20 @@ false - acknowledge packet dropped.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>true - input packet accepted
-false - input packet dropped.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="UdpToolkit_Network_Channels_SequencedChannel_HandleOutputPacket_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleOutputPacket*"></a>
-  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_HandleOutputPacket_System_UInt16__System_UInt32__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleOutputPacket(System.UInt16@,System.UInt32@)">HandleOutputPacket(out UInt16, out UInt32)</h4>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_HandleOutputPacket_System_Byte_System_Guid_UdpToolkit_Network_Contracts_Protocol_PacketType_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.HandleOutputPacket(System.Byte,System.Guid,UdpToolkit.Network.Contracts.Protocol.PacketType)">HandleOutputPacket(Byte, Guid, PacketType)</h4>
   <div class="markdown level1 summary"><p>Handle output packets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void HandleOutputPacket(out ushort id, out uint acks)</code></pre>
+    <pre><code class="lang-csharp hljs">public NetworkHeader HandleOutputPacket(byte dataType, Guid connectionId, PacketType packetType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,15 +311,37 @@ false - input packet dropped.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Packet id.</p>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td><p>Type of data.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">acks</span></td>
-        <td><p>32 bits of history about previous packets (not implemented but reserved).</p>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">connectionId</span></td>
+        <td><p>Connection identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.PacketType.html">PacketType</a></td>
+        <td><span class="parametername">packetType</span></td>
+        <td><p>Packet type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><p>Network header.</p>
 </td>
       </tr>
     </tbody>
@@ -333,13 +349,12 @@ false - input packet dropped.</p>
   
   
   <a id="UdpToolkit_Network_Channels_SequencedChannel_IsDelivered_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.IsDelivered*"></a>
-  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_IsDelivered_System_UInt16_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.IsDelivered(System.UInt16)">IsDelivered(UInt16)</h4>
-  <div class="markdown level1 summary"><p>Checking packet delivered state.</p>
-</div>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_IsDelivered_UdpToolkit_Network_Contracts_Protocol_NetworkHeader__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.IsDelivered(UdpToolkit.Network.Contracts.Protocol.NetworkHeader@)">IsDelivered(NetworkHeader)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDelivered(ushort id)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsDelivered(in NetworkHeader networkHeader)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,10 +367,9 @@ false - input packet dropped.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Packet id.</p>
-</td>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><span class="parametername">networkHeader</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -370,9 +384,135 @@ false - input packet dropped.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>true - packet delivered
-false - packet not delivered.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="UdpToolkit_Network_Channels_SequencedChannel_UdpToolkit_Network_Contracts_Channels_IChannel_HandleAck_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.UdpToolkit#Network#Contracts#Channels#IChannel#HandleAck*"></a>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_UdpToolkit_Network_Contracts_Channels_IChannel_HandleAck_UdpToolkit_Network_Contracts_Protocol_NetworkHeader__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.UdpToolkit#Network#Contracts#Channels#IChannel#HandleAck(UdpToolkit.Network.Contracts.Protocol.NetworkHeader@)">IChannel.HandleAck(NetworkHeader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IChannel.HandleAck(in NetworkHeader networkHeader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><span class="parametername">networkHeader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Channels_SequencedChannel_UdpToolkit_Network_Contracts_Channels_IChannel_HandleInputPacket_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.UdpToolkit#Network#Contracts#Channels#IChannel#HandleInputPacket*"></a>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_UdpToolkit_Network_Contracts_Channels_IChannel_HandleInputPacket_UdpToolkit_Network_Contracts_Protocol_NetworkHeader__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.UdpToolkit#Network#Contracts#Channels#IChannel#HandleInputPacket(UdpToolkit.Network.Contracts.Protocol.NetworkHeader@)">IChannel.HandleInputPacket(NetworkHeader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IChannel.HandleInputPacket(in NetworkHeader networkHeader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><span class="parametername">networkHeader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UdpToolkit_Network_Channels_SequencedChannel_UdpToolkit_Network_Contracts_Channels_IChannel_IsDelivered_" data-uid="UdpToolkit.Network.Channels.SequencedChannel.UdpToolkit#Network#Contracts#Channels#IChannel#IsDelivered*"></a>
+  <h4 id="UdpToolkit_Network_Channels_SequencedChannel_UdpToolkit_Network_Contracts_Channels_IChannel_IsDelivered_UdpToolkit_Network_Contracts_Protocol_NetworkHeader__" data-uid="UdpToolkit.Network.Channels.SequencedChannel.UdpToolkit#Network#Contracts#Channels#IChannel#IsDelivered(UdpToolkit.Network.Contracts.Protocol.NetworkHeader@)">IChannel.IsDelivered(NetworkHeader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IChannel.IsDelivered(in NetworkHeader networkHeader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UdpToolkit.Network.Contracts.Protocol.NetworkHeader.html">NetworkHeader</a></td>
+        <td><span class="parametername">networkHeader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -93,7 +93,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Broadcast&lt;TEvent&gt;(Guid caller, Guid roomId, TEvent event, byte channelId, BroadcastMode broadcastMode)</code></pre>
+    <pre><code class="lang-csharp hljs">void Broadcast&lt;TEvent&gt;(Guid caller, Guid groupId, TEvent event, byte channelId, BroadcastMode broadcastMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -113,8 +113,8 @@
       </tr>
       <tr>
         <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">roomId</span></td>
-        <td><p>Room identifier.</p>
+        <td><span class="parametername">groupId</span></td>
+        <td><p>Group identifier.</p>
 </td>
       </tr>
       <tr>
